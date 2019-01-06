@@ -94,7 +94,7 @@ public class RecyclerViewMediaAdapter extends RecyclerView.Adapter<RecyclerViewM
                         try {
                             copyFile(sourceFile, new File(Environment.getExternalStorageDirectory().toString() + DIRECTORY_TO_SAVE_MEDIA_NOW + sourceFile.getName()));
                             Snacky.builder().
-                                    setActivty(activity).
+                                    setActivity(activity).
                                     setText(R.string.save_successful_message).
                                     success().
                                     show();
@@ -103,7 +103,7 @@ public class RecyclerViewMediaAdapter extends RecyclerView.Adapter<RecyclerViewM
                             Log.e("RecyclerV", "onClick: Error:"+e.getMessage() );
 
                             Snacky.builder().
-                                    setActivty(activity).
+                                    setActivity(activity).
                                     setText(R.string.save_error_message).
                                     error().
                                     show();
